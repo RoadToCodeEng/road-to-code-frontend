@@ -1,0 +1,64 @@
+/* Design tokens extracted from the Road to Code Figma file. */
+:root {
+  /* Brand */
+  --color-primary: #2453da;
+  --color-primary-tint: rgba(36, 83, 218, 0.06);
+  --color-accent: #8cff70;
+  --color-accent-tint: rgba(140, 255, 112, 0.13);
+
+  /* Neutrals */
+  --color-ink: #0b1220;
+  --color-ink-raised: #141d30;
+  --color-ink-sunken: #0f172a;
+  --color-ink-border: #1f2a3a;
+  --color-muted: #8891a3;
+  --color-line: #e7e9ee;
+  --color-surface: #ffffff;
+  --color-bg: #fafafb;
+  --color-border-on-dark: rgba(255, 255, 255, 0.1);
+
+  /* Status */
+  --color-danger: #ff4d4f;
+  --color-notice-bg: #f2ebeb;
+  --color-notice-border: rgba(140, 255, 112, 0.25);
+
+  /* Code syntax */
+  --code-keyword: #ff628c;
+  --code-string: var(--color-accent);
+  --code-function: #9effff;
+  --code-comment: #5a6982;
+
+  /* Typography */
+  --font-sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Layout */
+  --container: 1200px;
+  --gutter: 24px;
+  --section-pad: 96px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-card: 0 1px 1.5px rgba(0, 0, 0, 0.04);
+  --shadow-card-soft: 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-editor: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --section-pad: 72px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --gutter: 16px;
+    --section-pad: 56px;
+  }
+}

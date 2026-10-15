@@ -1,0 +1,23 @@
+# Netlify configuration for mta-sts.roadtocode.tech. Set the Netlify site's
+# base directory to sites/mta-sts; paths below are relative to it.
+# Serves only the MTA-STS policy, which receiving mail servers fetch over HTTPS.
+# Bump the id in the _mta-sts TXT record whenever the policy changes.
+[build]
+  publish = "public"
+  # Skip deploys when nothing in sites/mta-sts changed.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Keep header values on one line: Netlify joins multi-line strings with commas.
+    Content-Security-Policy = "default-src 'none'; frame-ancestors 'none'"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+
+# The policy must be served as text/plain.
+[[headers]]
+  for = "/.well-known/mta-sts.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"

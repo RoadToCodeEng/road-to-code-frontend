@@ -1,0 +1,3 @@
+# This host only serves the MTA-STS policy for mail servers; nothing to index.
+User-agent: *
+Disallow: /

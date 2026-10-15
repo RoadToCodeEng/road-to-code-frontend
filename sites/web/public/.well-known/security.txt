@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:security@roadtocode.tech
+Expires: 2027-10-01T00:00:00.000Z
+Encryption: https://roadtocode.tech/.well-known/pgp-key.txt
+Preferred-Languages: en
+Canonical: https://roadtocode.tech/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iJEEARYKADkWIQSY/Cp3jlx2X42X9OxuyrxOn7EWIwUCatOzEhsUgAAAAAAEAA5t
+YW51MiwyLjUrMS4xMiwwLDMACgkQbsq8Tp+xFiM9swEAoSIzclbLcdGLbpNiMnME
+V5o3K5vUbOZYJssquUkSPtkBAJi6Zy0aEG+7lvPnxq1l13dffaIDT7zWT5rIiInq
+0vkD
+=J6SG
+-----END PGP SIGNATURE-----

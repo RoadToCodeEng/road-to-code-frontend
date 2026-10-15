@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services - Road to Code</title>
+  <meta name="description" content="Technical strategy, product engineering, DevOps & SRE, team augmentation, code audits and fractional CTO services.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <site-header active="services"></site-header>
+
+  <main>
+    <section class="hero hero--bordered">
+      <div class="container hero__content">
+        <p class="eyebrow">Our services</p>
+        <h1 class="hero__title">End-to-end software consultancy</h1>
+        <p class="lead hero__lead">We partner with organizations to model, architect, and ship high-performing technical products. Our engineering standards are built for permanence and real business speed.</p>
+      </div>
+    </section>
+
+    <service-section id="technical-strategy" eyebrow="Technical strategy" heading="Formulate clear paths to scale">
+      <p>We align your core engineering goals directly with market outcomes. Say goodbye to guesswork and unoptimized tech choices.</p>
+      <li>Custom Tech Stack Selection</li>
+      <li>Comprehensive Architecture Reviews</li>
+      <li>Production-Ready Migration Roadmaps</li>
+      <li>SaaS and Data-flow Engineering Advice</li>
+      <div slot="visual" class="service-section__visual">
+        <code-window variant="panel" filename="architecture-spec.ts">
+<pre class="code-window__code"><span><span class="tok-key">const</span> techStack = <span class="tok-fn">defineArchitecture</span>({</span><span>  frontend: <span class="tok-str">"Angular"</span>,</span><span>  runtime: <span class="tok-str">"Java"</span>,</span><span>  database: <span class="tok-str">"PostgreSQL"</span>,</span><span>  caching: <span class="tok-str">"Redis Cluster"</span>,</span><span>  scalabilityRule: <span class="tok-key">true</span></span><span>});</span></pre>
+        </code-window>
+      </div>
+    </service-section>
+
+    <service-section id="product-engineering" tone="light" reverse eyebrow="Product engineering" heading="Full-stack execution from day one">
+      <p>We build modular, robust systems that are fast, intuitive, and highly functional. We treat writing code as an engineering trade.</p>
+      <li>Java and Kotlin Development</li>
+      <li>API Design &amp; Integration</li>
+      <li>SaaS Systems from MVP to Enterprise</li>
+      <li>Clean Code Quality with 100% PR Ownership</li>
+      <div slot="visual" class="service-section__visual">
+        <div class="mock-panel" aria-hidden="true">
+          <div class="mock-card dashboard">
+            <div class="dashboard__head">
+              <div class="dashboard__brand"><span class="dashboard__logo"></span>Analytics Dashboard</div>
+              <span class="dashboard__live">LIVE</span>
+            </div>
+            <div class="dashboard__stats">
+              <div class="dashboard__stat">
+                <span class="dashboard__label">TOTAL REVENUE</span>
+                <span class="dashboard__value dashboard__value--primary">$142,384</span>
+              </div>
+              <div class="dashboard__stat">
+                <span class="dashboard__label">ACTIVE USERS</span>
+                <span class="dashboard__value">12,492</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </service-section>
+
+    <service-section id="devops-sre" eyebrow="DevOps &amp; SRE" heading="DevOps &amp; SRE">
+      <p>We help design and build the infrastructure your applications run on - CI/CD pipelines, container orchestration, observability stacks, and cloud-native architecture. Whether you are migrating to the cloud or optimising what is already there, we make deployments boring and reliable.</p>
+      <li>CI/CD Pipeline Design &amp; Automation</li>
+      <li>Kubernetes &amp; Container Orchestration</li>
+      <li>Infrastructure as Code (Terraform, OpenTofu)</li>
+      <li>Observability, Logging &amp; Alerting</li>
+      <div slot="visual" class="service-section__visual">
+        <code-window variant="terminal" filename="rtc-cli">
+<pre class="code-window__code"><span class="tok-muted">$ rtc deploy --production</span><span class="tok-ok">✔ Verifying environment credentials... Done</span><span class="tok-ok">✔ Packaging Lambda artifacts... Done (12.4 MB)</span><span class="tok-ok">✔ Updating CloudFormation stacks... Done</span><span>🚀 Site Live: https://roadtocode.tech (3.4s)</span></pre>
+        </code-window>
+      </div>
+    </service-section>
+
+    <service-section id="team-augmentation" tone="light" reverse eyebrow="Team augmentation" heading="Senior power embedded in your team">
+      <p>No typical recruiters. We jump straight into your workflows to share knowledge and instantly increase deployment speed.</p>
+      <li>Embedded Senior Developers</li>
+      <li>PR Reviews &amp; Architecture Alignment</li>
+      <li>Lean &amp; XP Best Practices Integration</li>
+      <li>Mentorship &amp; Technical Onboarding Support</li>
+      <div slot="visual" class="service-section__visual service-section__visual--image">
+        <img src="assets/images/team-augmentation.png" width="1184" height="864" alt="A laptop showing code on a desk lit by a lamp in a dark office" loading="lazy">
+      </div>
+    </service-section>
+
+    <service-section id="code-audit-rescue" eyebrow="Code audit &amp; rescue" heading="Modernize systems without disruption">
+      <p>Slowing down because of code bloat or performance bottleneck issues? We clean up tech debt and bring outdated architectures back to life.</p>
+      <li>Deep-dive Code Audits</li>
+      <li>Bottleneck Discovery &amp; Optimization</li>
+      <li>Monolith-to-Microservices Migration</li>
+      <li>Technical Debt Reduction &amp; Refactoring</li>
+      <div slot="visual" class="service-section__visual service-section__visual--bare">
+        <code-window variant="report" filename="rtc-audit-report.sh">
+          <div class="report">
+            <p class="tok-muted"><span class="tok-ok">$</span> rtc audit --deep --modules=12</p>
+            <p class="tok-muted">Scanning 847 files across 12 modules...</p>
+            <div class="report__block">
+              <div class="report__head"><span class="report__name">[1] Deep-dive Code Audits</span><span class="report__status tok-ok">✓ PASS</span></div>
+              <dl class="report__stats">
+                <div><dt>Findings</dt><dd>47</dd></div>
+                <div><dt>Critical</dt><dd>3</dd></div>
+                <div><dt>Score</dt><dd>92/100</dd></div>
+              </dl>
+              <p class="report__note">Code quality: clean. No security vulnerabilities detected in the scan.</p>
+            </div>
+            <div class="report__block">
+              <div class="report__head"><span class="report__name">[2] Bottleneck Discovery &amp; Optimization</span><span class="report__status tok-ok">✓ PASS</span></div>
+              <dl class="report__stats">
+                <div><dt>Slow queries</dt><dd>8</dd></div>
+                <div><dt>Memory leaks</dt><dd>2</dd></div>
+                <div><dt>Latency</dt><dd>340ms</dd></div>
+              </dl>
+              <p class="report__note">Optimization opportunities identified in modules: auth, payments, and search.</p>
+            </div>
+            <div class="report__block">
+              <div class="report__head"><span class="report__name">[3] Monolith-to-microservices migration</span><span class="report__status tok-err">✗ ISSUE</span></div>
+              <dl class="report__stats">
+                <div><dt>Tightly coupled</dt><dd>4 modules</dd></div>
+                <div><dt>Service boundaries</dt><dd>unclear</dd></div>
+                <div><dt>Risk</dt><dd>HIGH</dd></div>
+              </dl>
+              <p class="report__note">Recommend: extract billing + notifications into separate services before migration.</p>
+            </div>
+            <div class="report__block">
+              <div class="report__head"><span class="report__name">[4] Technical debt reduction &amp; refactoring</span><span class="report__status tok-ok">✓ PASS</span></div>
+              <dl class="report__stats">
+                <div><dt>Tech debt score</dt><dd>6.2 → 9.1</dd></div>
+                <div><dt>Refactor effort</dt><dd>3 sprints</dd></div>
+                <div><dt>Confidence</dt><dd>94%</dd></div>
+              </dl>
+              <p class="report__note">Refactor plan generated: ./refactor/plan.md</p>
+            </div>
+            <div class="report__links">
+              <p>→ Full report: ./audit/report-2024-11.pdf</p>
+              <p>→ Estimated fix effort: 3 sprints</p>
+            </div>
+          </div>
+        </code-window>
+      </div>
+    </service-section>
+
+    <service-section id="fractional-cto" tone="light" reverse eyebrow="Fractional CTO" heading="A second opinion when it counts">
+      <p>Not every project needs a full engagement. Sometimes you need an experienced engineer to review an architecture, vet a vendor, or pressure-test a technical decision. We offer lightweight advisory sessions - one-off or recurring - so you get clarity without commitment.</p>
+      <li>Architecture &amp; Technology Reviews</li>
+      <li>Vendor and Tool Evaluation</li>
+      <li>Technical Due Diligence for Investors</li>
+      <li>Hiring &amp; Team Structure Guidance</li>
+      <div slot="visual" class="service-section__visual">
+        <div class="mock-panel" aria-hidden="true">
+          <div class="mock-card roadmap">
+            <p class="roadmap__title">Q3 TECHNICAL ROADMAP</p>
+            <p class="roadmap__item roadmap__item--done">Developer Experience Portal</p>
+            <p class="roadmap__item roadmap__item--active">Event-Driven Architecture Migration</p>
+            <p class="roadmap__item roadmap__item--todo">Engineering Team Scale-Up</p>
+          </div>
+        </div>
+      </div>
+    </service-section>
+
+    <cta-banner heading="Ready to talk scope?" subtitle="Let's design a technical roadmap and strategy tailored for your business goals."></cta-banner>
+  </main>
+
+  <site-footer></site-footer>
+</body>
+</html>

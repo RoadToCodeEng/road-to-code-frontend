@@ -1,0 +1,26 @@
+# Road to Code
+
+> Road to Code is an independent, fully remote software consultancy based in Belgium. It partners with companies, from startup to enterprise, to ship production-grade software, with a focus on backend, infrastructure, and DevOps & SRE.
+
+Every engagement is led by a senior engineer with production experience who writes the code, reviews the pull requests, and owns the deploys alongside the client's team. The consultancy is led by a backend engineer with 15+ years of experience in fintech, logistics, and SaaS. The way of working is grounded in Extreme Programming (pair programming, test-driven development, continuous integration), Lean Product Development, and User-Centered Design.
+
+## Pages
+
+- [Home](https://roadtocode.tech/): overview of the services and how an engagement runs (discovery, build, launch & support)
+- [Services](https://roadtocode.tech/services): technical strategy, product engineering, DevOps & SRE, team augmentation, code audit & rescue, and fractional CTO
+- [About](https://roadtocode.tech/about): the consultancy, its experience, and its methodology
+- [Contact](https://roadtocode.tech/contact): contact form; the first conversation is free
+
+## Services
+
+- Technical strategy: architecture reviews, tech stack selection, migration roadmaps
+- Product engineering: full-stack development from MVP to scale, Java and Kotlin, API design and integration
+- DevOps & SRE: CI/CD pipelines, Kubernetes, infrastructure as code (Terraform, OpenTofu), observability
+- Team augmentation: senior engineers embedded in the client's team, code reviews, mentorship
+- Code audit & rescue: code audits, performance bottlenecks, legacy modernization, technical debt reduction
+- Fractional CTO: on-demand technical leadership, vendor evaluation, technical due diligence, hiring guidance
+
+## Contact
+
+- Email: hi@roadtocode.tech
+- Contact form: https://roadtocode.tech/contact

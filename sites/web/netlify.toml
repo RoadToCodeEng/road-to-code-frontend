@@ -1,0 +1,64 @@
+# Netlify configuration for roadtocode.tech. Set the Netlify site's base
+# directory to sites/web; paths below are relative to it.
+# The site is plain static files: no build step. Only public/ is deployed,
+# so repo files like this one and README.md stay private.
+[build]
+  publish = "public"
+  # Skip deploys when nothing in sites/web changed.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ."
+
+# ---------------------------------------------------------------------------
+# Security headers, applied to every response.
+# ---------------------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Keep header values on one line: Netlify joins multi-line strings with
+    # commas, which would break directive separators.
+    #
+    # Only load resources from this site. No inline scripts or styles are used,
+    # so 'unsafe-inline' is not needed. Forms may only post back to this site.
+    # Violations are reported to the "default" Reporting-Endpoints group;
+    # report-uri is the fallback for browsers without report-to (Firefox).
+    # Browsers that support report-to ignore report-uri.
+    Content-Security-Policy = "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; manifest-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; report-to default; report-uri https://roadtocode.report-uri.com/r/d/csp/enforce"
+
+    # Force HTTPS for two years on this domain and every subdomain, and opt in
+    # to browsers' HSTS preload list (submit at https://hstspreload.org).
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+
+    # Don't allow the site to be embedded in frames (clickjacking protection
+    # for browsers that predate CSP frame-ancestors).
+    X-Frame-Options = "DENY"
+
+    # Don't let browsers guess content types.
+    X-Content-Type-Options = "nosniff"
+
+    # Send only the origin to other sites, nothing over plain HTTP.
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Turn off every browser feature the site doesn't use (all of them), so
+    # nothing falls back to the browser's default allowlist. This includes the
+    # advertising APIs (Topics, Protected Audience, Shared Storage, ...), and
+    # unload=() keeps pages eligible for the back/forward cache.
+    Permissions-Policy = "accelerometer=(), attribution-reporting=(), autoplay=(), bluetooth=(), browsing-topics=(), camera=(), clipboard-read=(), clipboard-write=(), compute-pressure=(), cross-origin-isolated=(), display-capture=(), encrypted-media=(), fullscreen=(), gamepad=(), geolocation=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), join-ad-interest-group=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), private-aggregation=(), private-state-token-issuance=(), private-state-token-redemption=(), publickey-credentials-create=(), publickey-credentials-get=(), run-ad-auction=(), screen-wake-lock=(), serial=(), shared-storage=(), shared-storage-select-url=(), storage-access=(), sync-xhr=(), unload=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+
+    # Isolate the site from other origins' windows and resources, and report
+    # anything those policies block to the "default" group.
+    Cross-Origin-Opener-Policy = 'same-origin; report-to="default"'
+    Cross-Origin-Resource-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = 'require-corp; report-to="default"'
+
+    # Send browser reports (network errors, deprecations, interventions) to
+    # report-uri. Reporting-Endpoints is the current standard; Report-To is
+    # the older form that NEL still depends on. NEL asks browsers to report
+    # failed requests to this domain and its subdomains.
+    Reporting-Endpoints = 'default="https://roadtocode.report-uri.com/a/d/g"'
+    Report-To = '{"group":"default","max_age":31536000,"endpoints":[{"url":"https://roadtocode.report-uri.com/a/d/g"}],"include_subdomains":true}'
+    NEL = '{"report_to":"default","max_age":31536000,"include_subdomains":true}'
+
+# Font files never change in place, so let browsers cache them for a year.
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

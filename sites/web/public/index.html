@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Road to Code - Software consultancy</title>
+  <meta name="description" content="Road to Code is an independent software consultancy that partners with companies - from startup to enterprise - to ship production-grade software.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <site-header></site-header>
+
+  <main>
+    <section class="hero hero--dark">
+      <div class="container hero__content">
+        <div class="hero__text">
+          <h1 class="hero__title">Changing how the world builds software.</h1>
+          <p class="lead hero__lead">Road to Code is an independent software consultancy that partners with companies - from startup to enterprise - to ship production-grade software.</p>
+        </div>
+        <a class="btn btn--accent" href="contact.html">Get in touch</a>
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="container stack">
+        <section-heading align="center" eyebrow="What we do" eyebrow-size="sm" heading="End-to-end software consultancy"></section-heading>
+        <div class="grid grid--3">
+          <feature-card icon="terminal-square" heading="Technical Strategy">Architecture review, tech stack guidance, and a roadmap that aligns engineering with business outcomes.</feature-card>
+          <feature-card icon="zap-off" heading="Product Engineering">Full-stack development from MVP to scale - we write the code, own the quality, and ship production-ready systems.</feature-card>
+          <feature-card icon="closed-caption" heading="DevOps &amp; SRE">AWS, GCP, Azure - deployment, ops, and observability setup that keeps your systems reliable and secure.</feature-card>
+          <feature-card icon="users" heading="Team Augmentation">Embedded senior engineers who integrate with your team, lead by example, and accelerate delivery.</feature-card>
+          <feature-card icon="activity" heading="Code Audit &amp; Rescue">Legacy modernization, performance fixes, and technical debt reduction - turning slow systems into fast ones.</feature-card>
+          <feature-card icon="archive" heading="Fractional CTO">Technical leadership on demand - architecture calls, hiring support, and strategic guidance for product teams.</feature-card>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--grey">
+      <div class="container stack">
+        <section-heading align="center" eyebrow="How we work" eyebrow-size="sm" heading="From brief to deployed in weeks, not months"></section-heading>
+        <div class="grid grid--3 grid--gap-lg">
+          <step-card number="01" heading="Discovery">We audit your stack, interview stakeholders, and map the problem space. You get a roadmap, not a slide deck.</step-card>
+          <step-card number="02" heading="Build">Our engineers embed with your team. Sprints, code reviews, CI/CD - we ship like we work here, because we do.</step-card>
+          <step-card number="03" heading="Launch &amp; Support">We deploy, monitor, and hand over. Documentation, runbooks, and optional retainer support keep things running.</step-card>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="container split">
+        <code-window variant="editor" filename="api/route.ts">
+<pre class="code-window__code"><span><span class="tok-key">import </span>{ route, response } <span class="tok-key">from </span><span class="tok-str">"@rtc/core"</span>;</span><span class="tok-comment">// Scaffold high-performing middleware instant endpoints</span><span><span class="tok-key">export const </span><span class="tok-fn">GET</span> = route(<span class="tok-key">async</span> (req) =&gt; {</span><span>  const data = await req.json();</span><span>  return response.ok({</span><span>    message: <span class="tok-str">"Fast and Deployed!"</span>,</span><span>    timestamp: Date.now()</span><span>  });</span><span>});</span></pre>
+        </code-window>
+        <div class="showcase__text">
+          <h2 class="showcase__title">Engineers who ship, not just advise</h2>
+          <p class="body-text">Every Road to Code engagement is led by a senior engineer with production experience. We write the code, review the PRs, and own the deploys - shoulder to shoulder with your team.</p>
+        </div>
+      </div>
+    </section>
+
+    <cta-banner heading="Let us build what is next."></cta-banner>
+  </main>
+
+  <site-footer></site-footer>
+</body>
+</html>
